@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url(./boats-45a.jpg) no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 400px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(29, 29, 29, 0.8);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      font-size: 14px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      box-sizing: border-box;
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    input:focus {
+      border-color: #5cb85c;
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4cae4c;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #d9534f;
+    }
+
+    .message.success {
+      color: #5cb85c;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      input, button {
+        font-size: 14px;
+        padding: 8px;
+      }
+
+      .footer {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 16px;
+      }
+
+      input, button {
+        font-size: 12px;
+        padding: 8px;
+      }
+      .message, .error {
+        font-size: 10px;
+      }
+
+      .footer {
+        font-size: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Search Form</h2>
+    <form id="searchForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username" />
+        <span id="usernameError" class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" />
+        <span id="passwordError" class="error"></span>
+      </div>
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" placeholder="Enter your ID" />
+        <span id="idError" class="error"></span>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    <div id="message" class="message"></div>
+  </div>
+  <div class="footer">
+    &copy; 2024 Muhammad Bilal Waleed. All rights reserved.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
